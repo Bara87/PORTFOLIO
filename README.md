@@ -62,4 +62,8 @@ Le projet utilise `dotenv` pour la gestion des variables d'environnement. Assure
 
 # 3 CAPTURES D'ECRAN DES VALIDATEURS W3C :
 
+# -Validation html et CSS de la page d'accueil sur W3C 
+
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/App.jpeg)
+
 
