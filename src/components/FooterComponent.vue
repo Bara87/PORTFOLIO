@@ -2,7 +2,7 @@
   <footer>
     <div id="footer">
         <div>
-          <a href="#" target="_blank"><img  src="/images/linkedin.png" alt="linkedin" class="img"></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img  src="/images/linkedin.png" alt="linkedin" class="img"></a>
         </div>
         <div>
           <a href="https://twitter.com/?lang=fr" target="_blank"><img src="/images/twitter.png" alt="twitter" class="img"></a>
