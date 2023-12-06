@@ -64,9 +64,25 @@ Le projet utilise `dotenv` pour la gestion des variables d'environnement. Assure
 
 # -Validation html et CSS de la page d'accueil sur W3C 
 
-![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/App.jpeg)
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/App.jpeg) ![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/Appcss.jpeg)
+
+
 
 
 # -Valiadtion HTML et CSS du Header sur W3C
+
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/header.jpeg)
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/headercss.jpeg)
+
+
+
+
+
+# -Valiadtion HTML et CSS du Footer sur W3C
+
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/footer.jpeg)
+![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/fcss.jpeg)
+
+
 
 
