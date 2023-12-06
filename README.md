@@ -67,3 +67,6 @@ Le projet utilise `dotenv` pour la gestion des variables d'environnement. Assure
 ![Texte alternatif](https://raw.githubusercontent.com/Bara87/PORTFOLIO/master/public/images/App.jpeg)
 
 
+# -Valiadtion HTML et CSS du Header sur W3C
+
+
