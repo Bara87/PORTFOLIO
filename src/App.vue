@@ -62,8 +62,7 @@ main {
   align-items: center;
   width:100%;
   height:560px;
-  background-image: url("/public/images/fond2.jpg");
-  background-size: cover;
+  background-color: #6A00FF;
   
 }
 
