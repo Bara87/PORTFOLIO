@@ -134,22 +134,24 @@
 
 </template>
 
-
 <script>
-
+import { getCurrentInstance } from 'vue';
 
 export default {
-  
-  methods: {
-    closeModal() {
-      this.$emit('close');
-    },
+  setup() {
+    const { emit } = getCurrentInstance();
+
+    const closeModal = () => {
+      emit('close');
+    };
+
+    return {
+      closeModal,
+    };
   },
-};
-   
-
-
+}
 </script>
+
 
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Raleway:wght@400;700&display=swap');

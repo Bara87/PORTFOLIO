@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div id="footer">
+    <div id="socialmedia">
         <div>
           <a href="https://www.linkedin.com/" target="_blank"><img  src="/images/linkedin.png" alt="linkedin" class="img"></a>
         </div>
@@ -28,14 +28,17 @@ export default {
       return currentDate.toLocaleDateString();
     },
   },
-};
+};  
 </script>
 
 <style scoped>
-#footer {
-  background-color: darkturquoise;
+footer{
+  background-color: #E8C7DE;
+  padding-bottom: 20px;
+}
+#socialmedia {
   width: 100%;
-  height: 90px;  
+  height: 80px;  
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -23,9 +23,20 @@
 </template>
 
 <script> 
+import { ref } from 'vue';
+
 export default {
-  props: {
-    content: String,
+ 
+  setup(props) {
+    // Accéder à la propriété content à l'aide de props
+    const content = ref(props.content);
+
+    // ... le reste de votre logique du composant
+
+    return {
+      content,
+      // ... d'autres propriétés et méthodes
+    };
   },
 };
 </script>
@@ -33,23 +44,22 @@ export default {
 #presentation {
   width: 100%;
   height: 100%;
+  padding: 0 20px;
   
-  background-color: blanchedalmond;
+  background-color: #F0E8EA;
    }
 
   #img {
     float: left; 
     margin-right: 20px;
     margin-left: 20px;
-    width: 300px;
+    width: 250px;
     height:200px;
   }
-  * {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+ 
   p {
     text-align: justify;
+    line-height: 32px;
   }
 </style>
 

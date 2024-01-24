@@ -2,9 +2,7 @@
   <header>
     <router-link to="/main" class="background-link">
     <div>      
-      <h1><a>Présentation</a></h1>
-      <h1><a>Créations</a></h1>
-      <h1><a>Contact</a></h1>
+     
     </div>
     </router-link>
   </header>

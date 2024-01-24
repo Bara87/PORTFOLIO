@@ -25,6 +25,7 @@
           </router-link>
               <figcaption class="text">Contact</figcaption>
         </div>
+
       
     </main> 
     <FooterComponent />
@@ -35,10 +36,12 @@
 import HeaderComponent from "@/components/HeaderComponent.vue"; // Assurez-vous que le chemin est correct
 import FooterComponent from "@/components/FooterComponent.vue"
 
+
 export default {
   components: {
     HeaderComponent,
     FooterComponent,
+    
   },
   // ... autres options du composant
 };
@@ -61,8 +64,8 @@ main {
   justify-content: center;
   align-items: center;
   width:100%;
-  height:560px;
-  background-color: #6A00FF;
+  height:580px;
+  background-color: #976ED0;
   
 }
 

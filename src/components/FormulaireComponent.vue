@@ -23,23 +23,24 @@
 
 
 <script>
+import { ref } from 'vue';
+
 export default {
-  data() {
-    return {
-      nom: '',
-      prenom: '',
-      objet: '',
-      message: ''
-    };
-  },
-  methods: {
-    envoyerFormulaire() {
+  setup() {
+    // Utilisation de ref pour créer des variables réactives
+    const nom = ref('');
+    const prenom = ref('');
+    const objet = ref('');
+    const message = ref('');
+
+    // Fonction pour envoyer le formulaire
+    const envoyerFormulaire = () => {
       // Récupérer les données du formulaire
       const formData = {
-        nom: this.nom,
-        prenom: this.prenom,
-        objet: this.objet,
-        message: this.message
+        nom: nom.value,
+        prenom: prenom.value,
+        objet: objet.value,
+        message: message.value
       };
 
       // Envoyer une requête POST au serveur Node.js
@@ -59,16 +60,25 @@ export default {
           alert('Formulaire envoyé avec succès !');
 
           // Effacer les champs du formulaire
-          this.nom = '';
-          this.prenom = '';
-          this.objet = '';
-          this.message = '';
+          nom.value = '';
+          prenom.value = '';
+          objet.value = '';
+          message.value = '';
         })
         .catch(error => {
           console.error('Erreur lors de l\'envoi de la requête :', error);
         });
-    }
-  }
+    };
+
+    // Retourner les variables réactives et la fonction envoyerFormulaire
+    return {
+      nom,
+      prenom,
+      objet,
+      message,
+      envoyerFormulaire,
+    };
+  },
 };
 </script>
 
@@ -76,7 +86,10 @@ export default {
 #contact {
   width: 100%;
   height: 100%;
-  background-color:white;  }
+  background-color:#BCAF9C;  
+  padding: 0 20px 10px 20px;
+  box-sizing: border-box;
+  }
 
   .form {
   display: flex;
@@ -100,6 +113,6 @@ export default {
   bottom: -40px;
   cursor: pointer;
 
-
 }
+
 </style>
