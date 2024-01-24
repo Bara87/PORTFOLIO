@@ -25,44 +25,51 @@
     <MonCV v-if="isMonCVVisible" @close="closeMonCV" />
   </div>
 </template>
-
 <script>
-import MonCV from "@/components/MonCV.vue"
+import { ref} from 'vue';
+import MonCV from "@/components/MonCV.vue";
 
 export default {
 
-  props: {
-    content: String,
-  },
-
-   data() {
-    return {
-      isMonCVVisible: false,
-       };
-        },
-
-  methods: {
-    closeModal() {
-      this.$emit('close');
-    },
-    
-    openMonCV() {
-      this.isMonCVVisible = true;
-    },
-    
-
-    closeMonCV() {
-      this.isMonCVVisible = false;
-    },
+  setup() {
    
+
+    // Utilisation de ref pour créer une variable réactive
+    const isMonCVVisible = ref(false);
+
+    // Fonction pour ouvrir le composant MonCV
+    const openMonCV = () => {
+      isMonCVVisible.value = true;
+    };
+
+    // Fonction pour fermer le composant MonCV
+    const closeMonCV = () => {
+      isMonCVVisible.value = false;
+    };
+
+    // Fonction pour émettre l'événement 'close'
+    const closeModal = () => {
+     
+    };
+
+    // Retourner les variables réactives et les fonctions nécessaires
+    return {
+      
+      isMonCVVisible,
+      openMonCV,
+      closeMonCV,
+      closeModal,
+    };
   },
 
   components: {
     MonCV,
-      },
+  },
 };
-
 </script>
+
+
+
 
 <style scoped>
 /* Styles pour votre modal, par exemple, pour le rendre centré */
@@ -71,7 +78,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 560px;
+  height: 580px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -84,7 +91,7 @@ export default {
   padding: 20px;
   border-radius: 8px;
   width: 100%;
-  height: 550px;
+  height: 580px;
   position: relative;
 }
 
