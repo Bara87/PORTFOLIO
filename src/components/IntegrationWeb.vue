@@ -280,7 +280,7 @@ h2 {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width:   50px 50px 0 0; /* Ajustez les valeurs pour définir la taille du triangle */
+    border-width:   50px 50px 0 0; 
     border-color: transparent #592A2E ;
    
     
