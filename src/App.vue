@@ -1,39 +1,33 @@
 <template>
   <div id="container">
     <HeaderComponent />
-    <main>
-      
-      <router-view></router-view>
-        
+    <main>      
+      <router-view></router-view>        
         <div id="presentation-section" class="section-container">
           <router-link to="/presentation" >
-               <img src="/images/presentation1.jpg" alt="" class="img">              
+            <img src="/images/presentation1.jpg" alt="Logo à cliquer pour accéder à ma presentation" >              
           </router-link>
-               <figcaption class="text">Présentation</figcaption>      
+            <figcaption class="text">Présentation</figcaption>      
         </div>
-
         <div id="creations-section"  class="section-container">
           <router-link to="/creations">            
-               <img src="/images/creations.jpeg" alt="" class="img">                            
+            <img src="/images/creations.jpeg" alt="Logo à cliquer pour accéder à mes créations" >                            
           </router-link>
-               <figcaption class="text">Créations</figcaption> 
+            <figcaption class="text">Créations</figcaption> 
         </div>
-
         <div  id="formulaire-section"  class="section-container">
           <router-link to="/formulaire">
-               <img src="/images/contact.jpeg" alt="" class="img">               
+            <img src="/images/contact.jpeg" alt="Logo à cliquer pour accéder au formulaire de contact" >               
           </router-link>
-              <figcaption class="text">Contact</figcaption>
-        </div>
-
-      
+            <figcaption class="text">Contact</figcaption>
+        </div>      
     </main> 
     <FooterComponent />
   </div>
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent.vue"; // Assurez-vous que le chemin est correct
+import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue"
 
 
@@ -43,62 +37,61 @@ export default {
     FooterComponent,
     
   },
-  // ... autres options du composant
+ 
 };
-
-
-  
 </script>
 
 <style scoped>
 
 #app {
+  width: 100%;
+  height:auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
+ 
 }
 
 main {
+  margin: auto;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width:100%;
+  width:90%;
   height:580px;
-  background-color: #976ED0;
-  
+  background: rgb(0, 0, 255, 0.3)  
 }
 
-#presentation-section {
-  
+#presentation-section {  
   width: 20%; 
   height: 70%;
   margin: 20px;
-  padding: 20px;  
- 
+  padding: 20px;   
 }
+
 #creations-section {
   width: 20%; 
   height: 70%;  
 }
+
 #formulaire-section {
   width: 20%; 
   height: 70%;
   margin: 20px;
   padding: 20px;
-
 }
 
-.img {
+img {
   width: 100%; 
   height: 100%;
   object-fit: cover;
-  
+  border: solid black 1px;  
 }
+
 .text {
   text-align: center;
-  color: rgba(255, 255, 255, 1);
-  
+  color: rgb(0, 0, 0, 0.5);
   font-weight: bold;
   font-size: 20px;
 }
@@ -106,10 +99,8 @@ main {
 h2 {
   position: absolute;
   margin-bottom: 0;
-  text-align: center;
-  
-  font-size: 24px;
-  /* Ajoutez d'autres styles si nécessaire */
+  text-align: center; 
+  font-size: 24px;  
 }
 
 
@@ -123,13 +114,14 @@ h2 {
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
+  background-color: #09f36a;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
+
 * {
   text-decoration: none;
  }
 
-
-/* Ajoutez des styles supplémentaires au besoin */
 </style>
