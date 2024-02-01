@@ -1,9 +1,5 @@
 
 <template>
-
- <div class="modal">
-  
-    <div class="modal-content"> 
 <head>
   <meta name="charset" content="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
@@ -11,12 +7,9 @@
   <meta name="keywords" content="HTML5, CSS3, GitHub"/>
   <meta name="robots" content="index, follow"/>
   <title>Mon CV</title>
-  <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
-   
-    
-        <div id="cv-container">
+<body >
+ <div id="cv-container">  
             <header>
                 <figure>
                     <img src="/images/Bara.jpeg" id="photo"/>
@@ -122,15 +115,10 @@
                 <section id="date">
                      <p>Dernière mise à jour le <time datetime="2022-08-10">10 Aout 2022</time></p>
                 </section>
-            </footer>       
-        </div>
+            </footer>     
     
-   
+   </div>
 </body>
-<button @click="closeModal" class="button">Fermer</button>  
- </div> 
-  
-  </div > 
 
 </template>
 
@@ -162,49 +150,24 @@ export default {
     text-decoration: none;
     font-size: 15px;
 }
+
+
+#cv-container {
+  width: 95%; 
+  max-width: 950px; 
+  padding-top: 40px;
+  padding-bottom: 20px; 
+  margin: auto;
+  background-color: #782221;
+  background-color: ;
+  
+}
+
 *:hover {
     cursor: crosshair;
 }
-.modal {
-    position: absolute;
-    width: 100%;
-    height: 590px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -10px;
-    
-    
-    
-}
-.modal-content
-{
-    width: 100%;
-    height: 580px;
-    overflow: auto;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-   
-}
-.button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
 
-#cv-container {
-    width: 950px;
-    height: 1600px;
-    background-color: #782221;
-    margin: auto;
-    padding-top: 40px;
-    
 
-}
 
 figure {
     width: 150px;
@@ -265,7 +228,7 @@ h2 {
 }
  
 #BLOC2 {
-    height: 1150px;
+    height:auto;
     
     background-color: white;
     border-right: #2c1d27 solid;

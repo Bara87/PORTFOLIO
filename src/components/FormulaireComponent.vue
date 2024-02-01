@@ -2,7 +2,7 @@
   <div id="contact">
     <h2>Formulaire{{ $route.params.id }}</h2>
 
-    <form @submit.prevent="envoyerFormulaire" class="form">
+    <form @submit.prevent="envoyerFormulaire" class="form" method="POST">
       <label for="nom">Nom :</label>
       <input v-model="nom" type="text" id="nom" name="nom" class="contact" required >
 
@@ -20,8 +20,6 @@
     
   </div>
 </template>
-
-
 <script>
 import { ref } from 'vue';
 
@@ -81,27 +79,28 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 #contact {
   width: 100%;
   height: 100%;
-  background-color:#BCAF9C;  
+  background-color: rgba(236, 238, 244, 1);
   padding: 0 20px 10px 20px;
+  border: solid black 2px;
   box-sizing: border-box;
+
   }
 
   .form {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacement entre les éléments */
+  gap: 10px; 
   position: relative;
 }
 
 .contact {
-  width: 30%; /* La largeur peut être ajustée en fonction de vos besoins */
-  padding: 8px; /* Ajustez le rembourrage selon vos préférences */
-  box-sizing: border-box; /* Pour inclure le rembourrage dans la largeur totale */
+  width: 30%;
+  padding: 8px; 
+  box-sizing: border-box; 
 }
 #message {
   width: 80%;

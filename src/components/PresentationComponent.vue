@@ -1,6 +1,6 @@
 <template>
   <div id="presentation" >
-    <h2>Présentation {{ $route.params.id }}</h2>
+    <h2>Who am I ? {{ $route.params.id }}</h2>
     <img src="/images/Bara.jpeg" id="img" />
     <p>Je m'appelle Bara DIA, je suis actuellement une formation en ligne 
       <br>en developpeur web et web mobile full stack, délivrée par 
@@ -28,14 +28,14 @@ import { ref } from 'vue';
 export default {
  
   setup(props) {
-    // Accéder à la propriété content à l'aide de props
+
     const content = ref(props.content);
 
-    // ... le reste de votre logique du composant
+
 
     return {
       content,
-      // ... d'autres propriétés et méthodes
+    
     };
   },
 };
@@ -45,8 +45,11 @@ export default {
   width: 100%;
   height: 100%;
   padding: 0 20px;
-  
-  background-color: #F0E8EA;
+  background-color: rgba(236, 238, 244, 1);
+  border: 1px solid #000; 
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+ 
    }
 
   #img {
