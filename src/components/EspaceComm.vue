@@ -35,8 +35,6 @@ export default {
 
 
 <style scoped>
-/* Styles pour votre modal, par exemple, pour le rendre centré */
-
 
 .screen {
   width: 300px;
