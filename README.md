@@ -18,11 +18,7 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 - [npm](https://www.npmjs.com/) : Gestionnaire de paquets pour Node.js.
   
 - [Vue.js](https://vuejs.org/) : Framework JavaScript utilisé pour la partie frontend.
-  
-- [nodemailer](https://nodemailer.com/) : Bibliothèque pour l'envoi d'e-mails depuis une application Node.js.
-  
-- [body-parser](https://www.npmjs.com/package/body-parser) : Middleware pour Express.js facilitant le traitement du corps des requêtes HTTP.
-  
+
 - [vue-router](https://router.vuejs.org/) : Bibliothèque de routage pour Vue.js.
 
 - [vue.config.js](https://cli.vuejs.org/config/) : Fichier de configuration pour Vue.js.
@@ -49,16 +45,6 @@ npm install
   cd portfolio
   npm run serve
 
- °Backend (Express.js)
-
-  cd portfolio/backend
-
-  npm run start
-
-
-## Configuration de l'environnement
-
-Le projet utilise `dotenv` pour la gestion des variables d'environnement. Assurez-vous de créer un fichier `.env` à la racine du projet et d'y ajouter les variables d'environnement nécessaires. Un exemple de fichier `.env` est fourni dans le fichier `.env.example`.
 
 # 3 CAPTURES D'ECRAN DES VALIDATEURS W3C :
 
