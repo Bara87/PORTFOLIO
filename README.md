@@ -3,9 +3,8 @@
 
 Ce projet qui clôture la première partie de ma formation sur les préréquis 
 d’un développeur Web et Web mobile, a été très riche en découverte pour ma part. 
-Cela m’a permis de mettre en pratique les connaissances apprises depuis le début 
-de ma formation avec l’école. J’ai du prendre mes propres initiatives pour pouvoir
-trouver des solutions en effectuant des recherches sur le net à travers des sites 
+Cela m’a permis de mettre en pratique les connaissances apprises en cours de formation et de me familiariser avec Vue.js.
+J’ai du prendre mes propres initiatives pour pouvoir trouver des solutions en effectuant des recherches sur le net à travers des sites 
 comme Stackoverflow, GitHub, chatGPT et Google. Le temps que j’ai pris pour réaliser
 le projet est de 18 jours
 
