@@ -14,29 +14,13 @@
 </template>
 
 <script>
-import { getCurrentInstance } from 'vue';
 
-export default {
-  setup() {
-    const { emit } = getCurrentInstance();
-
-    const closeModal = () => {
-      emit('close');
-    };
-
-    return {
-      closeModal,
-    };
-  },
-};
 </script>
 
 
 
 
 <style scoped>
-/* Styles pour votre modal, par exemple, pour le rendre centré */
-
 
 .screen {
   width: 300px;

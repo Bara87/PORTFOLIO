@@ -131,21 +131,7 @@
 </html>   
 </template>
 <script>
-import { getCurrentInstance } from 'vue';
 
-export default {
-  setup() {
-    const { emit } = getCurrentInstance();
-
-    const closeModal = () => {
-      emit('close');
-    };
-
-    return {
-      closeModal,
-    };
-  },
-}
 </script>
 <style scoped>
 
@@ -165,7 +151,7 @@ body {
     background-image: url('/public/images/img/bg.jpg');
     background-size: cover;
     padding-bottom: 15px;
-    z-index: 1;
+    
 }
 
 .container{
@@ -280,7 +266,7 @@ h2 {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width:   50px 50px 0 0; /* Ajustez les valeurs pour définir la taille du triangle */
+    border-width:   50px 50px 0 0; 
     border-color: transparent #592A2E ;
    
     

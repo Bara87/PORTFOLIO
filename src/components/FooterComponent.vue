@@ -10,14 +10,20 @@
 </template>
 
 <script>
+
+
 export default {
-  methods: {
-    getCurrentDate() {
+  setup() {
+    const getCurrentDate = () => {
       const currentDate = new Date();
       return currentDate.toLocaleDateString();
-    },
+    };
+
+    return {
+      getCurrentDate,
+    };
   },
-};  
+};
 </script>
 
 <style scoped>

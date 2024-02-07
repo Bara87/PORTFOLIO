@@ -1,16 +1,20 @@
+
 <template>
   <div id="contact">
     <h2>Formulaire{{ $route.params.id }}</h2>
 
-    <form @submit.prevent="envoyerFormulaire" class="form" method="POST">
+    <form  @submit.prevent="envoyerEmail" class="form" method="POST">
       <label for="nom">Nom :</label>
       <input v-model="nom" type="text" id="nom" name="nom" class="contact" required >
 
       <label for="prenom">Prénom :</label>
       <input v-model="prenom" type="text" id="prenom" name="prenom" class="contact" required>
 
+       <label for="email">Email:</label>
+      <input v-model="email" type="email" id="email" required>
+
       <label for="objet">Objet :</label>
-      <input v-model="objet" type="text" id="objet" name="objet" class="contact" required>
+      <input v-model="objet" npmtype="text" id="objet" name="objet" class="contact" required>
 
       <label for="message">Message :</label>
       <textarea v-model="message" id="message" name="message" required></textarea>
@@ -22,59 +26,53 @@
 </template>
 <script>
 import { ref } from 'vue';
+import emailjs from 'emailjs-com';
 
 export default {
   setup() {
-    // Utilisation de ref pour créer des variables réactives
+    
     const nom = ref('');
     const prenom = ref('');
+    const email = ref('');
     const objet = ref('');
     const message = ref('');
 
-    // Fonction pour envoyer le formulaire
-    const envoyerFormulaire = () => {
-      // Récupérer les données du formulaire
-      const formData = {
-        nom: nom.value,
-        prenom: prenom.value,
+   
+    emailjs.init('uLX1cMy2oeCpTjg5h');
+
+    // Méthode pour envoyer l'e-mail
+    const envoyerEmail = () => {
+      const templateParams = {
+        to_name: nom.value + ' ' + prenom.value,
+        from_name: email.value,
         objet: objet.value,
-        message: message.value
+        message: `You got a new message from ${nom.value} ${prenom.value}:(${email.value})\n\nRegarding: ${objet.value}:\n\nMessage :${message.value}\n\nBest wishes,\nEmailJS tea.`,
       };
 
-      // Envoyer une requête POST au serveur Node.js
-      fetch('http://localhost:3000/envoyer-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-        .then(response => response.json())
-        .then(data => {
-          // Faire quelque chose avec la réponse du serveur
-          console.log('Réponse du serveur :', data);
+      emailjs.send('service_2om1oho', 'template_w9596xg', templateParams)
+        .then((response) => {
+          console.log('E-mail envoyé avec succès :', response);
 
-          // Afficher un message de confirmation à l'utilisateur
-          alert('Formulaire envoyé avec succès !');
-
-          // Effacer les champs du formulaire
+          
           nom.value = '';
           prenom.value = '';
+          email.value = '';
           objet.value = '';
           message.value = '';
         })
-        .catch(error => {
-          console.error('Erreur lors de l\'envoi de la requête :', error);
+        .catch((error) => {
+          console.error('Erreur lors de l\'envoi de l\'e-mail :', error);
         });
     };
 
-    // Retourner les variables réactives et la fonction envoyerFormulaire
+    
     return {
       nom,
       prenom,
+      email,
       objet,
       message,
-      envoyerFormulaire,
+      envoyerEmail,
     };
   },
 };
@@ -102,9 +100,13 @@ export default {
   padding: 8px; 
   box-sizing: border-box; 
 }
+#email {
+  width: 40%;
+  height: 20px;
+}
 #message {
   width: 80%;
-  height: 200px;
+  height: 120px;
 }
 #button {  
   position: absolute;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Créations{{ $route.params.id }}</h2>
-     <p>Je vous présente les 3 projets que j'ai déjà réalisés auparavant dans le cadre de cette formation.</p>
+     <p>Voici quelques unes de mes réalisations</p>
      <button @click="openModal('MonCV')" class="button"><h3>Créez votre CV en HTML et CSS</h3></button>
      <button @click="openModal('CahierCharges')" class="button"><h3>Rédiger un cahier des charges</h3></button>
      <button @click="openModal('EspaceComm')" class="button"><h3>Dynamiser un espace commentaire avec JavaScript</h3></button>
@@ -27,20 +27,20 @@ export default {
 
     const openModal = (componentName) => {
       currentModalComponent.value = componentName;
-      isModalOpen.value = true;
+      isModalOpen.value = true; 
     };
 
     const closeModal = () => {
       isModalOpen.value = false;
-    };
+    }; 
 
- 
     return {
       isModalOpen,
       currentModalComponent,
       openModal,
       closeModal
     };
+    
   },
   components: {
     Modal,

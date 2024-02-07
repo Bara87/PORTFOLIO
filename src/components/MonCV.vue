@@ -123,21 +123,7 @@
 </template>
 
 <script>
-import { getCurrentInstance } from 'vue';
 
-export default {
-  setup() {
-    const { emit } = getCurrentInstance();
-
-    const closeModal = () => {
-      emit('close');
-    };
-
-    return {
-      closeModal,
-    };
-  },
-}
 </script>
 
 
@@ -159,7 +145,6 @@ export default {
   padding-bottom: 20px; 
   margin: auto;
   background-color: #782221;
-  background-color: ;
   
 }
 

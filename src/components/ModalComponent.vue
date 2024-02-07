@@ -10,18 +10,22 @@
 
 <script>
 export default {
+
   props: {
-    visible: Boolean,
-    showOverlay: {
-      type: Boolean,
-      default: true,
-    },
+  visible: {
+    type: Boolean,
+    default: true, 
   },
+  showOverlay: {
+    type: Boolean,
+    default: true,
+  },
+},
+
   setup(props, { emit }) {
     const closeModal = () => {
       emit('close');
     };
-
     return {
       closeModal,
     };
@@ -51,17 +55,18 @@ export default {
   background: rgba(0, 0, 0, 0.9);
 }
 
-.modal {
+.modal{
   background: rgb(143, 144, 142);
   padding: 15px;
   border-radius: 10px;
-  position: fixed;
-  width: 80%; 
-  max-width: 800px; 
+  position: relative;
+  width: 70%; 
+  
   height: auto;
   max-height: 80vh;
   overflow-y: auto; 
   box-sizing: border-box;
+  z-index: 0;
 }
 
 .close {
